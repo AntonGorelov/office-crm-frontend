@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AuthorisationComponent } from './components/authorisation.component';
+import { LoginComponent } from './components/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AuthorisationComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -13,8 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [ AuthorisationComponent ],
-  exports: [AuthorisationComponent]
+  bootstrap: [ LoginComponent ],
+  exports: [LoginComponent]
 })
 
-export class AuthModule { }
+export class LoginModule { }

@@ -1,5 +1,5 @@
-$grey: #edebe9;
-.auth-form{
+@import "./src/styles/variables.scss";
+.login-form{
   height: 100%;
   display: flex;
   align-items: center;
@@ -7,15 +7,15 @@ $grey: #edebe9;
   text-align: center;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 100;
-  background-color: $grey;
+  background-color: $login-background-color;
   flex-direction: column;
   input{
     width: 300px;
     text-align: center;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 100;
-    border:1px solid #b3cccc;
-    outline-color: #b3cccc;
+    border:1px solid $login-input-color;
+    outline-color: $login-input-color;
   }
   .login-title{
     margin-bottom: 2px;
@@ -37,12 +37,16 @@ $grey: #edebe9;
 .password-input{
   position: relative;
 }
+.name-input{
+  padding-bottom: 20px;
+}
 .input-group-addon{
   position: absolute;
   top: 0;
   right: 0;
   padding: 7px;
-  background-color: black;
+  border-radius: 0.25rem;
+  background-color: gray;
   color: white;
   cursor: pointer;
 }
@@ -53,6 +57,7 @@ $grey: #edebe9;
   visibility: hidden;
   font-size: 13px;
   color: red;
+  padding-top: 3px;
   &.inncorect{
     margin-bottom: 8px;
   }
@@ -64,13 +69,17 @@ $grey: #edebe9;
   margin-bottom: 16px;
 }
 .logo-words{
-  width: 232px;
+  width: 208px;
 }
 .logo-logo{
-  width: 92px;
+  width: 80px;
 }
 .form-group{
   margin-bottom: 8px;
+  .btn-primary{
+    background-color: #6fda44;
+    border-color: #6fda44;
+  }
 }
 .alert{
   padding: 2px;

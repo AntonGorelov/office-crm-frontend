@@ -1,7 +1,7 @@
 import { AppComponent } from './app.component';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ProfileComponent } from './main/components/profile/profile.component';
-import { AuthorisationComponent } from './auth/components/authorisation.component';
+import { LoginComponent } from './login/components/login.component';
 import { MainComponent } from './main/main.component';
 
 export const routes: Routes = [
@@ -23,7 +23,7 @@ export const routes: Routes = [
   },
   {
     path: 'login',
-    component: AuthorisationComponent
+    component: LoginComponent
   }
 ];
 

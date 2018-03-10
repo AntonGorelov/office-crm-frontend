@@ -1,4 +1,4 @@
-$grey: #807e7b;
+@import "./src/styles/variables.scss";
 .header{
   padding: 8px 16px 8px 101px;
   display: flex;
@@ -22,7 +22,7 @@ $grey: #807e7b;
 }
 .search-text{
   color: black;
-  border: 1px solid $grey;
+  border: 1px solid $header-grey;
   border-radius: 3px;
   height: 32px;
   padding-left: 32px;
@@ -39,7 +39,7 @@ $grey: #807e7b;
   }
 }
 .top-nav-notify{
-  color: $grey;
+  color: $header-grey;
   font-size: 19px;
   display: inline-block;
   min-width: 50px;
@@ -61,7 +61,7 @@ $grey: #807e7b;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $grey;
+  color: $header-grey;
 }
 .app-shortcuts{
   margin: 0;
@@ -98,7 +98,7 @@ $grey: #807e7b;
 .user-img{
   width: 32px;
   height: 32px;
-  border: 1px solid $grey;
+  border: 1px solid $header-grey;
   border-radius: 50%;
   cursor: pointer;
 }

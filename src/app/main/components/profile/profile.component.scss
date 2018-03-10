@@ -1,3 +1,4 @@
+@import "./src/styles/variables.scss";
 .profile{
   margin: 16px 0;
   background-color: #f5f3f4;
@@ -17,8 +18,8 @@
       width: 300px;
       font-family: 'Nunito Sans', sans-serif;
       font-weight: 100;
-      border:1px solid #b3cccc;
-      outline-color: #b3cccc;
+      border:1px solid $profile-input-color;
+      outline-color: $profile-input-color;
       display: inline-block;
     }
   }

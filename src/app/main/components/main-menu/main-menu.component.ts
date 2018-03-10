@@ -2,12 +2,12 @@ import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector:"main-menu",
-  templateUrl: "main-menu.component.html",
-  styleUrls: ["main-menu.component.scss"]
+  selector: 'main-menu',
+  templateUrl: 'main-menu.component.html',
+  styleUrls: ['main-menu.component.scss']
 })
 
-export class MainMenuComponent implements OnInit{
+export class MainMenuComponent implements OnInit {
 
   @Output() openMenu: EventEmitter<boolean>;
   public open: boolean;

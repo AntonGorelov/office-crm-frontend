@@ -1,6 +1,7 @@
 <div class="dashboard">
   <main-menu (openMenu)="header.sendData($event)" #menu></main-menu>
   <header [open]="open" #header></header>
+  <!--go to profile page-->
   <div class="content" [ngClass]="{'open-menu': menu.open, 'non-padding': router.url === '/login'}">
     <router-outlet></router-outlet>
   </div>

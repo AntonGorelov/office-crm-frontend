@@ -10,7 +10,8 @@ import { AppComponent } from './app.component';
 import { routing, routingComponents } from './app.routing';
 
 import '../styles/vendor.scss';
-import { AuthModule } from './auth/auth.module';
+import '../styles/variables.scss';
+import { LoginModule } from './login/login.module';
 import { MainModule } from './main/main.module';
 
 @NgModule({
@@ -20,7 +21,7 @@ import { MainModule } from './main/main.module';
     BrowserModule,
     SharedModule,
     HttpClientModule,
-    AuthModule,
+    LoginModule,
     MainModule,
     // Routes
     routing,

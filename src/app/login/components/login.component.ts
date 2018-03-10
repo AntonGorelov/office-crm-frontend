@@ -3,20 +3,20 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 
 
 @Component({
-  selector:"authorisation",
-  templateUrl: "authorisation.component.html",
-  styleUrls: ["authorisation.component.scss"]
+  selector: 'login',
+  templateUrl: 'login.component.html',
+  styleUrls: ['login.component.scss']
 })
 
-export class AuthorisationComponent {
+export class LoginComponent {
 
-  public greenEye: boolean;
+  public isShowPassword: boolean;
   public loginForm: FormGroup;
 
   @ViewChild('input') el: ElementRef;
 
   constructor(private _builder: FormBuilder) {
-    this.greenEye = false;
+    this.isShowPassword = false;
     this.loginForm = this._builder.group(
       {
         'name': [localStorage.getItem('name'), [
@@ -31,16 +31,16 @@ export class AuthorisationComponent {
   }
 
   public login() {
-    localStorage.setItem('password', this.loginForm.controls['password'].value);
-    localStorage.setItem('name',  this.loginForm.controls['name'].value);
+    localStorage.setItem('password', this.loginForm.get('password').value);
+    localStorage.setItem('name',  this.loginForm.get('name').value);
   }
 
   private showPassword() {
-    this.greenEye = !this.greenEye;
+    this.isShowPassword = !this.isShowPassword;
     let textbox = this.el.nativeElement;
-    if(textbox.type === 'text'){
+    if (textbox.type === 'text') {
       textbox.type = 'password';
-    }else{
+    } else {
       textbox.type = 'text';
     }
   }

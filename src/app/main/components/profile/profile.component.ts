@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
-  selector:"profile",
-  templateUrl: "profile.component.html",
-  styleUrls: ["profile.component.scss"]
+  selector: 'profile',
+  templateUrl: 'profile.component.html',
+  styleUrls: ['profile.component.scss']
 })
 
-export class ProfileComponent{
+export class ProfileComponent {
 
   private profileForm: FormGroup;
 
