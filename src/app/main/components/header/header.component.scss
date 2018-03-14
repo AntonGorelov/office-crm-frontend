@@ -1,6 +1,6 @@
 @import "./src/styles/variables.scss";
 .header{
-  padding: 8px 16px 8px 101px;
+  padding: 8px 16px 7px 41px;
   display: flex;
   align-items: center;
   position: fixed;
@@ -8,13 +8,33 @@
   transition: all 0.2s ease-out 0s;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 100;
-  background-color: #f5f3f4;
   border-bottom: 1px solid #ccc8c5;
   z-index: 10;
-  &.open{
-    padding-left: 273px;
-    transition: all 0.2s ease-out 0s;
-  }
+}
+.header::after{
+  bottom: -5px;
+  box-shadow: inset 0px 4px 8px -3px rgba(17, 17, 17, .06);
+  content: "";
+  height: 5px;
+  left: 0px;
+  opacity: 1;
+  pointer-events: none;
+  position: absolute;
+  z-index: 2700;
+  width: 100%;
+}
+.logo{
+  display: flex;
+  height: 32px;
+  align-items: center;
+  padding: 8px;
+}
+.logo-logo{
+  width: 32px;
+  margin-right: 8px;
+}
+.logo-words{
+  width: 120px;
 }
 .search{
   position: relative;
@@ -25,7 +45,7 @@
   border: 1px solid $header-grey;
   border-radius: 3px;
   height: 32px;
-  padding-left: 32px;
+  padding-left: 16px;
   width: 100%;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 100;
@@ -34,6 +54,7 @@
   list-style-type: none;
   display: flex;
   margin: 0;
+  color: $header-grey;
   &>li{
     display: inline-block;
   }
@@ -50,7 +71,7 @@
 }
 .search-hepler{
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   font-size: 14px;
   height: 100%;
@@ -105,4 +126,13 @@
 .dropdown-item{
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 100;
+}
+#apps-dropdown-menu-right{
+  margin-left: -210px;
+}
+#settings-dropdown-menu-right{
+  margin-left: -123px
+}
+#user-dropdown-menu-right{
+  margin-left: -126px
 }

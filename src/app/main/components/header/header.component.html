@@ -1,4 +1,8 @@
-<div class="header" [ngClass]="{'open': open}" *ngIf="router.url !== '/login'">
+<div class="header">
+  <a href="" class="logo">
+    <img class="logo-logo" src="/assets/images/logo-logo.png" alt="">
+    <img class="logo-words" src="/assets/images/logo-words.png" alt="">
+  </a>
   <form class="search">
     <div class="search-inner">
       <input type="text" class="search-text" placeholder="Search for people, files, documents...">
@@ -16,11 +20,11 @@
         <i class="fa fa-bell-o" aria-hidden="true"></i>
       </a>
     </li>
-    <li class="dropdown">
-      <a href="" data-toggle="dropdown" class="top-nav-notify">
+    <li class="dropdown" (click)="openDropdown('apps-dropdown-menu-right')">
+      <a data-toggle="dropdown" class="top-nav-notify">
         <i class="fa fa-th" aria-hidden="true"></i>
       </a>
-      <div class="dropdown-menu dropdown-menu-right dropdown-menu--block" >
+      <div class="dropdown-menu dropdown-menu-right dropdown-menu--block" id="apps-dropdown-menu-right">
         <div class="row app-shortcuts">
           <a href="" class="col-4 app-shortcuts-item">
             <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -49,21 +53,21 @@
         </div>
       </div>
     </li>
-    <li class="dropdown">
-      <a href="" data-toggle="dropdown" class="top-nav-notify">
+    <li class="dropdown" (click)="openDropdown('settings-dropdown-menu-right')">
+      <a data-toggle="dropdown" class="top-nav-notify">
         <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
       </a>
-      <div class="dropdown-menu dropdown-menu-right">
+      <div class="dropdown-menu dropdown-menu-right" id="settings-dropdown-menu-right">
         <a href="" class="dropdown-item">Action 1</a>
         <a href="" class="dropdown-item">Action 2</a>
         <a href="" class="dropdown-item">Action 3</a>
       </div>
     </li>
   </ul>
-  <div class="user">
+  <div class="user" (click)="openDropdown('user-dropdown-menu-right')">
     <div class="user-info dropdown">
       <img class="user-img" src="/assets/images/V14pjbfk.jpg" alt="" data-toggle="dropdown">
-      <div class="dropdown-menu dropdown-menu-right">
+      <div class="dropdown-menu dropdown-menu-right" id="user-dropdown-menu-right">
         <a href="" class="dropdown-item">View profile</a>
         <a href="" class="dropdown-item">Settings</a>
         <a href="" class="dropdown-item">Log out</a>

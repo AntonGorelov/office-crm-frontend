@@ -7,11 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['main.component.scss']
 })
 
-export class MainComponent{
+export class MainComponent {
 
   public open: boolean;
 
-  constructor(public router: Router){
+  constructor(public router: Router) {
     this.open = false;
   }
 
